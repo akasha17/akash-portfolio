@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akash | Python Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Adding Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Akash</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="resume.pdf" download class="resume-btn">Download Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO / HOME SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <p>I'm</p>
+      <h1>Akash</h1>
+      <h2 class="fullstack-font"><span id="typing"></span><span class="cursor">|</span></h2>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn">Hire Me</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="about">
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>
+        Hi! I'm Akash, a passionate <strong>Python Full Stack Developer</strong> with experience building web apps using Django, HTML, CSS, and JavaScript. I love turning ideas into real products.
+      </p>
+      <p>
+        Outside of coding, I enjoy reading tech blogs, exploring new frameworks, and collaborating in developer communities.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS SECTION -->
+  <section id="skills" class="skills">
+    <h1>Skills</h1>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Python</h3>
+        <p>Proficient in Python, Django, Flask, and other backend technologies.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Front-End</h3>
+        <p>Experience with HTML, CSS, JavaScript, React, and front-end frameworks.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Databases</h3>
+        <p>Working knowledge of SQL, DBMS, MySQL.</p>
+      </div>
+      <div class="skill-card">
+        <h3>Version Control</h3>
+        <p>Proficient in using Git and GitHub for version control and collaboration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects" class="projects">
+    <h1>Projects</h1>
+    <!-- <div class="project-card">
+      <h3>Grocery Management System</h3>
+      <p>A full-fledged Django application for managing inventory and orders.</p>
+    </div> -->
+    <div class="project-card">
+      <h3>Hospital Management System (Django)</h3>
+      <p>A Django-based system for managing patients, doctors, hospital records, and appointments.</p>
+    </div>
+    <div class="project-card">
+      <h3>Restaurant Management System (PHP)</h3>
+      <p>A PHP application for managing restaurant reservations, orders, and customer details.</p>
+    </div>
+    <div class="project-card">
+      <h3>College Management System</h3>
+      <p>A comprehensive management system for handling college activities like student records, faculty management, and course assignments.</p>
+    </div>
+  </section>
+
+  
+  <!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+    <h1>Get in Touch</h1>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <h3>Email</h3>
+        <p><a href="mailto:akash@example.com">akash@example.com</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>Phone</h3>
+        <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>Location</h3>
+        <p>Kozhikode, Kerala, India</p>
+      </div>
+      <div class="contact-card">
+        <h3>GitHub</h3>
+        <p><a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      </div>
+      <div class="contact-card">
+        <h3>LinkedIn</h3>
+        <p><a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- JS for Letter-by-Letter Typing Effect -->
+  <script>
+    const fullText = "Python Full Stack Developer";
+    const typingEl = document.getElementById("typing");
+    const cursorEl = document.querySelector(".cursor");
+    let idx = 0;
+
+    function typeNextChar() {
+      if (idx < fullText.length) {
+        typingEl.textContent += fullText[idx++];
+        setTimeout(typeNextChar, 150);  // adjust typing speed (ms) here
+      } else {
+        // once done typing, blink cursor only
+        clearInterval(blinkCursor);
+      }
+    }
+
+    // simple cursor blink
+    const blinkCursor = setInterval(() => {
+      cursorEl.style.visibility =
+        cursorEl.style.visibility === "visible" ? "hidden" : "visible";
+    }, 500);
+
+    // start on page load
+    window.addEventListener("DOMContentLoaded", typeNextChar);
+  </script>
+
+</body>
+</html>
