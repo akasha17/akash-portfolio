@@ -265,3 +265,74 @@
   nav ul li a.resume-btn:hover {
     background: #a71f47;
   }
+  /* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .navbar .nav-links li {
+    width: 100%;
+  }
+
+  .navbar .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px 20px;
+    height: auto;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .about,
+  .skills,
+  .projects,
+  .contact {
+    padding: 50px 20px;
+  }
+
+  .skills-grid,
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
